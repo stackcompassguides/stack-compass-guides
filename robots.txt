@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vesku-k.github.io/stack-compass-guides/sitemap.xml
