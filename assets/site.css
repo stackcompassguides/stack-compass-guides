@@ -447,3 +447,136 @@ footer a {
     padding: 18px 20px;
   }
 }
+
+/* Selector tool */
+
+.tool-progress {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+  margin: 14px 0 18px;
+}
+
+.tool-progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width 180ms ease-out;
+}
+
+.q-step {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 18px 16px;
+}
+
+.q-step h2 {
+  margin: 0 0 4px;
+  font-size: 21px;
+}
+
+.q-hint {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.options {
+  display: grid;
+  gap: 8px;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 13px 14px;
+  cursor: pointer;
+}
+
+.option:hover,
+.option:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.option[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 700;
+}
+
+.tool-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.link-button {
+  font: inherit;
+  font-size: 15px;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 6px 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.link-button:hover {
+  color: var(--accent-dark);
+}
+
+.result-card {
+  border: 1px solid rgba(15, 118, 110, 0.42);
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 18px 16px;
+}
+
+.result-card h2 {
+  margin-top: 0;
+}
+
+.score-bar {
+  display: grid;
+  grid-template-columns: 96px 1fr 34px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.score-bar i {
+  display: block;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--accent);
+  opacity: 0.45;
+}
+
+.score-bar.top i {
+  opacity: 1;
+}
+
+.score-bar b {
+  text-align: right;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.static-questions {
+  border-top: 1px solid var(--line);
+  margin-top: 34px;
+  padding-top: 6px;
+}

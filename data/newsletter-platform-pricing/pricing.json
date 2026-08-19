@@ -1,0 +1,65 @@
+{
+  "dataset": "Creator newsletter platform pricing",
+  "publisher": "Stack Compass Guides",
+  "url": "https://stackcompassguides.github.io/stack-compass-guides/data/newsletter-platform-pricing/",
+  "verified": "2026-08-19",
+  "currency": "USD",
+  "note": "Prices read from each vendor's own public pricing page on the verification date. Per-subscriber plans are quoted at the 1,000 subscriber tier. Verify before purchase.",
+  "license": "Free to reuse with attribution to Stack Compass Guides.",
+  "platforms": [
+    {
+      "name": "Kit",
+      "pricing_url": "https://kit.com/pricing",
+      "free_plan": {"name": "Newsletter", "subscribers": 10000, "sending": "unlimited broadcasts", "automations": 1, "commerce": true},
+      "entry_paid": {"name": "Creator", "monthly": 39, "annual": 390, "at_subscribers": 1000},
+      "next_tier": {"name": "Pro", "annual": 790, "at_subscribers": 1000},
+      "revenue_fee": "3.5% + $0.30 per transaction, inclusive of card processing",
+      "pricing_model": "per subscriber"
+    },
+    {
+      "name": "MailerLite",
+      "pricing_url": "https://www.mailerlite.com/pricing",
+      "free_plan": {"name": "Free", "subscribers": 250, "sending": "2,500 emails/month", "automations": 3, "commerce": "1 digital product"},
+      "entry_paid": {"name": "Comfort", "monthly": 12, "annual_monthly_equivalent": 10.8},
+      "next_tier": {"name": "Power", "monthly": 25, "annual_monthly_equivalent": 22.5},
+      "revenue_fee": "no published platform percentage; Stripe fees apply",
+      "pricing_model": "per subscriber"
+    },
+    {
+      "name": "beehiiv",
+      "pricing_url": "https://www.beehiiv.com/pricing",
+      "free_plan": {"name": "Launch", "subscribers": 2500, "sending": "unlimited", "automations": 0, "commerce": false, "website": true, "custom_domain": true},
+      "entry_paid": {"name": "Scale", "monthly": 43, "annual": 517, "subscriber_ceiling": 100000},
+      "next_tier": {"name": "Max", "monthly": 96, "annual": 1151, "subscriber_ceiling": 100000},
+      "revenue_fee": "0% take rate on paid subscriptions (paid plans); Stripe fees apply",
+      "pricing_model": "flat band"
+    },
+    {
+      "name": "EmailOctopus",
+      "pricing_url": "https://emailoctopus.com/pricing",
+      "free_plan": {"name": "Starter", "subscribers": 2500, "sending": "10,000 emails/month", "automations": "basic", "commerce": false, "branding": "EmailOctopus branding on emails"},
+      "entry_paid": {"name": "Pro", "annual_monthly_equivalent": 9},
+      "next_tier": null,
+      "revenue_fee": "not applicable",
+      "pricing_model": "per subscriber"
+    },
+    {
+      "name": "Systeme.io",
+      "pricing_url": "https://systeme.io/pricing",
+      "free_plan": {"name": "Free", "contacts": 2000, "sending": "unlimited", "automations": true, "funnels": 3, "courses": 1, "commerce": true},
+      "entry_paid": {"name": "Startup", "monthly": 17, "contacts": 5000},
+      "next_tier": {"name": "Webinar", "monthly": 47, "contacts": 10000},
+      "revenue_fee": "0% transaction fees; your own Stripe or PayPal rates apply",
+      "pricing_model": "per contact"
+    },
+    {
+      "name": "Substack",
+      "pricing_url": "https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost",
+      "free_plan": {"name": "Free to publish", "subscribers": null, "sending": "unlimited", "automations": "minimal", "commerce": "paid subscriptions"},
+      "entry_paid": null,
+      "next_tier": null,
+      "revenue_fee": "10% of paid subscription revenue, plus Stripe processing and a recurring-billing fee",
+      "pricing_model": "revenue share"
+    }
+  ]
+}

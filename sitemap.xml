@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://stackcompassguides.github.io/stack-compass-guides/</loc>
-    <lastmod>2026-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://stackcompassguides.github.io/stack-compass-guides/about/</loc>
-    <lastmod>2026-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://stackcompassguides.github.io/stack-compass-guides/privacy/</loc>
-    <lastmod>2026-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://stackcompassguides.github.io/stack-compass-guides/affiliate-disclosure/</loc>
-    <lastmod>2026-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://stackcompassguides.github.io/stack-compass-guides/guides/kit-vs-mailerlite-for-creators/</loc>
-    <lastmod>2026-08-18</lastmod>
-  </url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/</loc><lastmod>2026-08-19</lastmod><priority>1.0</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/guides/</loc><lastmod>2026-08-19</lastmod><priority>0.8</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/guides/kit-vs-mailerlite-for-creators/</loc><lastmod>2026-08-19</lastmod><priority>0.9</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/guides/kit-vs-beehiiv/</loc><lastmod>2026-08-19</lastmod><priority>0.9</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/guides/kit-alternatives/</loc><lastmod>2026-08-19</lastmod><priority>0.9</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/guides/best-newsletter-platform-for-selling-digital-products/</loc><lastmod>2026-08-19</lastmod><priority>0.9</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/guides/free-newsletter-plans-compared/</loc><lastmod>2026-08-19</lastmod><priority>0.8</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/tools/newsletter-platform-selector/</loc><lastmod>2026-08-19</lastmod><priority>0.9</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/data/newsletter-platform-pricing/</loc><lastmod>2026-08-19</lastmod><priority>0.8</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/about/</loc><lastmod>2026-08-19</lastmod><priority>0.4</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/contact/</loc><lastmod>2026-08-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/privacy/</loc><lastmod>2026-08-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://stackcompassguides.github.io/stack-compass-guides/affiliate-disclosure/</loc><lastmod>2026-08-19</lastmod><priority>0.4</priority></url>
 </urlset>
