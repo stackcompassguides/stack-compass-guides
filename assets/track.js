@@ -108,12 +108,29 @@
     return VALID.test(last) ? last : "other";
   }
 
-  var CHANNEL = channel();
+  /* Owner opt-out. Visit any page with ?scg=off once per browser and this
+   * browser stops being counted: no analytics script is loaded, and affiliate
+   * links are tagged sid1=owner so test clicks are filterable in PartnerStack
+   * rather than indistinguishable from real ones. ?scg=on undoes it. */
+  function optedOut() {
+    try {
+      var flag = new URLSearchParams(window.location.search).get("scg");
+      if (flag === "off") window.localStorage.setItem("scg.optout", "1");
+      if (flag === "on") window.localStorage.removeItem("scg.optout");
+      return window.localStorage.getItem("scg.optout") === "1";
+    } catch (e) {
+      return false;
+    }
+  }
+
+  var OPTED_OUT = optedOut();
+  var CHANNEL = OPTED_OUT ? "owner" : channel();
   var PAGE = pageSlug();
 
   /* ---------------- Analytics (optional, cookieless) ---------------- */
 
   function loadAnalytics() {
+    if (OPTED_OUT) return;
     if (!UMAMI_WEBSITE_ID || UMAMI_WEBSITE_ID.indexOf("PASTE_") === 0) return;
     var s = document.createElement("script");
     s.async = true;
@@ -186,6 +203,7 @@
   window.scg = {
     channel: CHANNEL,
     page: PAGE,
+    optedOut: OPTED_OUT,
     event: event,
     /* Page-level scripts that inject links (the selector) call this to have them
      * decorated and instrumented like any link that was in the HTML. */
