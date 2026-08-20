@@ -153,6 +153,9 @@
   /* ---------------- Affiliate link decoration ---------------- */
 
   function decorate(link) {
+    /* sid1/sid2/sid3 are PartnerStack's documented parameters. Other networks
+     * have their own schemes, so only opt-in links are decorated. */
+    if (link.getAttribute("data-sid") !== "partnerstack") return;
     var cta = link.getAttribute("data-cta") || "inline";
     var base = link.getAttribute("data-href") || link.href;
     var url;

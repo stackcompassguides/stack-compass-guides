@@ -31,7 +31,7 @@
       <section class="hero">
         <p class="eyebrow">Free tool &middot; No signup, no email required</p>
         <h1>Which newsletter platform actually fits you?</h1>
-        <p class="lead">Nine questions, one recommendation, and the full scoring shown at the end so you can disagree with it. Six platforms are eligible — including the two we earn nothing from and the one with no affiliate programme at all.</p>
+        <p class="lead">Nine questions, one recommendation, and the full scoring shown at the end so you can disagree with it. Six platforms are eligible — including the ones we earn nothing from and the one with no affiliate programme at all.</p>
       </section>
 
       <div id="tool">
@@ -57,7 +57,7 @@
       <section class="static-questions">
         <h2>How the recommendation is made</h2>
         <p>Each answer adds points to the platforms it genuinely suits, using the pricing and feature data on our <a href="../../data/newsletter-platform-pricing/index.html">pricing reference page</a>, verified 19 August 2026. The platform with the most points wins; every point is shown to you at the end with the reason attached.</p>
-        <p>Three rules keep this honest. Affiliate relationships carry no weight in the scoring. Ties are broken <em>against</em> the platform we earn from, never for it. And Substack, which has no affiliate programme at all, can win outright — it does, for people who answer that they want no fixed cost and no automation.</p>
+        <p>Three rules keep this honest. Affiliate relationships carry no weight in the scoring. Ties are broken <em>against</em> the platforms we earn from, never for them. And Substack, which has no affiliate programme at all, can win outright — it does, for people who answer that they want no fixed cost and no automation.</p>
         <h3>The nine questions</h3>
         <ol>
           <li>How big is your list today?</li>
@@ -75,7 +75,7 @@
           <li><strong>Kit</strong> — 10,000 free subscribers, commerce on every plan, deep automations. <em>Affiliate link on this site.</em></li>
           <li><strong>MailerLite</strong> — cheapest capable paid plan, from $12/month. <em>No commission to us.</em></li>
           <li><strong>beehiiv</strong> — flat $43/month to 100,000 subscribers, ad network, 0% on paid subscriptions. <em>No commission to us.</em></li>
-          <li><strong>Systeme.io</strong> — free to 2,000 contacts with funnels, a course and 0% transaction fees. <em>No commission to us.</em></li>
+          <li><strong>Systeme.io</strong> — free to 2,000 contacts with funnels, a course and 0% transaction fees. <em>Affiliate link on this site.</em></li>
           <li><strong>EmailOctopus</strong> — 2,500 free subscribers, from $9/month, plain and cheap. <em>No commission to us.</em></li>
           <li><strong>Substack</strong> — no fixed cost, 10% of paid revenue. <em>No affiliate programme exists.</em></li>
         </ul>
@@ -119,8 +119,8 @@
           name: "Systeme.io",
           line: "Free to 2,000 contacts with funnels, a course platform and 0% transaction fees on sales.",
           catch: "Every individual piece is less polished than the specialist tool it replaces.",
-          url: "https://systeme.io/pricing",
-          affiliate: false,
+          url: "https://systeme.io/pricing?sa=sa02795257159d2da6d73f9247e69adc4c09b1fa8f",
+          affiliate: true,
           guide: "../../guides/best-newsletter-platform-for-selling-digital-products/index.html",
           guideLabel: "Selling digital products, compared"
         },
@@ -331,7 +331,7 @@
         if (p.affiliate) {
           cta = '<div class="cta-block">' +
                 '<p class="disclosure-inline">Affiliate link &mdash; commission to us, same price for you. <a href="../../affiliate-disclosure/index.html">Disclosure</a>.</p>' +
-                '<a class="button" href="' + p.url + '?sid1=unknown&amp;sid2=selector&amp;sid3=selector" rel="sponsored noopener" target="_blank" data-affiliate="kit" data-cta="selector">Go to ' + esc(p.name) + '</a>' +
+                '<a class="button" href="' + p.url + '?sid1=unknown&amp;sid2=selector&amp;sid3=selector" rel="sponsored noopener" target="_blank" data-affiliate="kit" data-sid="partnerstack" data-cta="selector">Go to ' + esc(p.name) + '</a>' +
                 '</div>';
         } else {
           cta = '<div class="cta-block">' +
