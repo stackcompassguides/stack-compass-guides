@@ -21,7 +21,7 @@
    * Free account: https://cloud.umami.is  (Hobby plan, cookieless, 100k events/mo)
    * Leave the placeholder untouched and the site simply runs without analytics.
    * ------------------------------------------------------------------ */
-  var UMAMI_WEBSITE_ID = "PASTE_UMAMI_WEBSITE_ID_HERE";
+  var UMAMI_WEBSITE_ID = "05d6abd7-50b2-4464-9ba1-2c5fa5ee2ac6";
   var UMAMI_SRC = "https://cloud.umami.is/script.js";
 
   var STORE_KEY = "scg.channel";
