@@ -140,14 +140,42 @@
     document.head.appendChild(s);
   }
 
-  function event(name, data) {
+  /* The analytics script loads asynchronously, so a fast click can happen before
+   * it exists. Queue until it does — a lost click is a lost signal. */
+  var queue = [];
+  var flushing = false;
+
+  function send(name, data) {
     try {
-      if (window.umami && typeof window.umami.track === "function") {
-        window.umami.track(name, data);
-      }
+      window.umami.track(name, data);
     } catch (e) {
       /* analytics must never break the page */
     }
+  }
+
+  function flush() {
+    if (!window.umami || typeof window.umami.track !== "function") return false;
+    while (queue.length) {
+      var item = queue.shift();
+      send(item[0], item[1]);
+    }
+    return true;
+  }
+
+  function startFlushing() {
+    if (flushing) return;
+    flushing = true;
+    var tries = 0;
+    var timer = setInterval(function () {
+      tries += 1;
+      if (flush() || tries > 50) clearInterval(timer);
+    }, 200);
+  }
+
+  function event(name, data) {
+    if (OPTED_OUT) return;
+    queue.push([name, data]);
+    if (!flush()) startFlushing();
   }
 
   /* ---------------- Affiliate link decoration ---------------- */
@@ -221,4 +249,14 @@
     wire();
   }
   loadAnalytics();
+
+  /* Diagnostic: open any page with ?scg=test to prove the event pipeline works
+   * end to end without having to click an affiliate link. */
+  try {
+    if (new URLSearchParams(window.location.search).get("scg") === "test") {
+      event("pipeline-test", { channel: CHANNEL, page: PAGE });
+    }
+  } catch (e) {
+    /* ignore */
+  }
 })();
