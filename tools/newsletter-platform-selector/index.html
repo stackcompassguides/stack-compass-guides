@@ -329,9 +329,20 @@
 
         var cta;
         if (p.affiliate) {
+          // Only Kit uses PartnerStack. Preserve other networks' issued URLs.
+          var affiliateUrl = p.url;
+          var networkAttribute = "";
+          if (winner === "kit") {
+            var kitUrl = new URL(affiliateUrl);
+            kitUrl.searchParams.set("sid1", "unknown");
+            kitUrl.searchParams.set("sid2", "selector");
+            kitUrl.searchParams.set("sid3", "selector");
+            affiliateUrl = kitUrl.toString();
+            networkAttribute = ' data-sid="partnerstack"';
+          }
           cta = '<div class="cta-block">' +
                 '<p class="disclosure-inline">Affiliate link &mdash; commission to us, same price for you. <a href="../../affiliate-disclosure/index.html">Disclosure</a>.</p>' +
-                '<a class="button" href="' + p.url + '?sid1=unknown&amp;sid2=selector&amp;sid3=selector" rel="sponsored noopener" target="_blank" data-affiliate="kit" data-sid="partnerstack" data-cta="selector">Go to ' + esc(p.name) + '</a>' +
+                '<a class="button" href="' + esc(affiliateUrl) + '" rel="sponsored noopener" target="_blank" data-affiliate="' + esc(winner) + '"' + networkAttribute + ' data-cta="selector">Go to ' + esc(p.name) + '</a>' +
                 '</div>';
         } else {
           cta = '<div class="cta-block">' +
